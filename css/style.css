@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+* {
+/*   border: 1px solid red; */
+}
+
+:root {
+  --mainColor: #42c0fb;
+  --navColor: #323232;
+  --backgroundColor: #eee;
+  --accentColor: #20a0f9;
+  --lightText: white;
+  --darkText: black;
+  --mainFont: 'Audiowide', cursive;
+}
+
+html, body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background-color: var(--navColor);
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+#toTop {
+  display: none;
+}
+
+  @media (max-width: 720px) {
+    nav {
+      flex-direction: column;
+      position: relative;
+    }
+    #toTop {
+      display: block;
+      z-index: 100;
+      color: #aaf142;
+      background: rgba(35,35,35,0.8);
+      position: fixed;
+      text-align: center;
+      right: 0px;
+      bottom: 10%;
+      text-decoration: none;
+      padding: 20px;
+      border-radius: 10px 0px 0px 10px;
+    }
+}
+nav a {
+  padding: 30px 40px;
+  text-decoration: none;
+  color: var(--accentColor);
+  font-family: var(--mainFont);
+}
+nav a:hover {
+  background-color: var(--mainColor);
+  color: #323232;
+}
+nav a:active {
+  background-color: var(--mainColor);
+}
+
+
+#splash {
+  height: 100vh;
+  background-color: var(--mainColor);
+  background-image: url("https://images.unsplash.com/photo-1523396206913-a003efa7861b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=99038251fa0ddd1d310a1d659ae0047b&auto=format&fit=crop&w=1955&q=80");
+  background-size: cover;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 0px;
+  text-align: center;
+  margin-bottom: -20px;
+}
+.splashText {
+  color: var(--lightText);
+  font-family: var(--mainFont);
+}
+h1 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+#work {
+  background-color: #222;
+}
+
+#work h2 {
+  padding-top: 6vh;
+  padding-bottom: 3vh;
+  text-align: center;
+  font-family: var(--mainFont);
+  color: var(--lightText);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
+/*   background-color: black; */
+  overflow: hidden;
+}
+.projects a {
+  display: flex;
+  flex-basis: calc(100%/3);
+  margin: 0px;
+  padding; 0px;
+}
+ 
+.portfolioItem {
+  width: 100.5%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+  @media (max-width: 920px) {
+    .projects a {
+    display: flex;
+    flex-basis: 50%;
+    margin: 0px;
+    padding; 0px;
+    }
+}
+  @media (max-width: 720px) {
+      .projects a {
+  display: flex;
+  flex-basis: 100%;
+  margin: 0px;
+  padding; 0px;
+  }
+}
+    
+#about h2 {
+  text-align: center;
+  font-family: var(--mainFont);
+  color: var(--darkText);
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  background-color: #fff;
+  margin-top: 0px;
+}
+#about ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#about ul li {
+  list-style: none;
+  padding-bottom: 3vh;
+  text-align: center;
+  font-size: 2rem;
+}
+.logoicon {
+  width: 2rem;
+  height: auto;
+  z-index: 0;
+}
+
+li i {
+  padding-left: 10px;
+}
+
+.grayScale {
+  filter: grayscale(100%) contrast(110%);
+  z-index: 1;
+}
+
+#workTogether {
+  background-color: #00A3F6;
+  text-align: center;
+  padding-top: 3rem;
+  min-height: 65vh;
+}
+#workTogether h3 {
+  font-size: 2rem;
+  font-family: var(--mainFont);
+}
+#contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 8vh;
+  flex-wrap: wrap;
+}
+#contact a {
+  font-family: var(--mainFont);
+  text-decoration: none;
+  color: black;
+  background-color: whitesmoke;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border: 3px solid #000;
+  border-radius: 100%;
+  margin-bottom: 2rem;
+  
+}
+
+footer {
+/*   text-align: center; */
+  background-color: #323232;
+  margin: 0px;
+  padding: 10px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+footer p {
+  padding-right: 10%;
+  text-align: right;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #00A3F6;
+  font-size: 1.5rem;
+}
